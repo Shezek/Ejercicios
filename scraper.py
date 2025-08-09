@@ -12,7 +12,7 @@ def extraer_datos_web(url):
         response = requests.get(url, headers=headers)
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
-        print(f"❌ Error al acceder a la URL: {e}")
+        print(f" Error al acceder a la URL: {e}")
         return
 
     soup = BeautifulSoup(response.text, "html.parser")
@@ -33,9 +33,10 @@ def extraer_datos_web(url):
         for p in parrafos:
             writer.writerow(["Párrafo", p])
 
-    print("\n✅ Datos guardados en 'datos_web.csv'.")
+    print("\n Datos guardados en 'datos_web.csv'.")
 
 # ---------- USO ----------
 if __name__ == "__main__":
-    url = input("🔗 Introduce la URL a analizar: ").strip()
+    url = input(" Introduce la URL a analizar: ").strip()
     extraer_datos_web(url)
+
