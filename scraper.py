@@ -5,7 +5,9 @@ import csv
 def extraer_datos_web(url):
     """Scrapea una URL y guarda título, encabezados y párrafos en un CSV."""
     headers = {
-        "User-Agent": "Mozilla/5.0"
+         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/115.0.0.0 Safari/537.36"
     }
 
     try:
@@ -39,4 +41,5 @@ def extraer_datos_web(url):
 if __name__ == "__main__":
     url = input(" Introduce la URL a analizar: ").strip()
     extraer_datos_web(url)
+
 
